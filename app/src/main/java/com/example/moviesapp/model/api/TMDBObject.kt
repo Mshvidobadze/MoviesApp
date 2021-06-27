@@ -8,6 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 import java.util.concurrent.TimeUnit
 
+const val PAGE = 1
+const val VIEW_COUNT = 20
 const val KEY = "0051467f0e3dccd84a9772a36ad491e0"
 const val URL = "https://api.themoviedb.org/3/"
 const val POSTER_URL = "https://image.tmdb.org/t/p/w342"
@@ -18,7 +20,7 @@ object TMDBObject {
 
         val requestInterceptor = Interceptor{ chain ->
 
-            val url = chain.request().url().newBuilder().addQueryParameter("key", KEY).build()
+            val url = chain.request().url().newBuilder().addQueryParameter("api_key", KEY).build()
 
             val request = chain.request().newBuilder().url(url).build()
 

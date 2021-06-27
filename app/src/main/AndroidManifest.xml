@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity android:name=".tvSeries.TVSeriesDetailsActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".popularTVSeries.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

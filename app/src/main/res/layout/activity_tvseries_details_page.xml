@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tvSeries.TVSeriesDetailsActivity">
+    tools:context=".tvSeries.TVSeriesDetailsActivity"
+    android:background="@color/custom_darkGrey">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,16 +25,17 @@
             <ImageView
                 android:id="@+id/tvPoster"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="400dp"
                 android:layout_gravity="center"
                 android:scaleType="matrix"
-                android:src="@drawable/ic_tvseries_poster"/>
+                android:src="@drawable/ic_tvseries_poster"
+                android:layout_margin="5dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_margin="8dp">
+                android:layout_margin="5dp">
 
                 <TextView
                     android:id="@+id/tvTitle"
@@ -41,23 +43,18 @@
                     android:layout_height="wrap_content"
                     android:text="Title"
                     android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
 
-                <TextView
-                    android:id="@+id/tvTagline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sub-Title"
-                    android:textSize="14sp"
-                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Movie Info"
-                    android:layout_marginTop="15dp"
-                    android:textSize="14sp"
-                    android:textStyle="bold"/>
+                    android:text="TV Series Info"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,17 +65,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Release Date: "
+                        android:text="First Air Date: "
                         android:textSize="12sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
 
                     <TextView
-                        android:id="@+id/tvReleaseDate"
+                        android:id="@+id/tvFirstAirDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:text="0"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
 
@@ -93,7 +92,8 @@
                         android:layout_marginTop="2dp"
                         android:text="Rating: "
                         android:textSize="12sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
 
                     <TextView
                         android:id="@+id/tvVoteAverage"
@@ -101,76 +101,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:text="0"
-                        android:textSize="12sp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="Length: "
                         android:textSize="12sp"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/tvRuntime"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="0hr"
-                        android:textSize="12sp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="Budget: "
-                        android:textSize="12sp"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/tvBudget"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="0"
-                        android:textSize="12sp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="Revenue: "
-                        android:textSize="12sp"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/tvRevenue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="0"
-                        android:textSize="12sp"/>
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
 
@@ -180,21 +112,37 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="Overview "
+                    android:text="Summary"
                     android:textSize="12sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
                 <TextView
                     android:id="@+id/tvOverview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="..."
-                    android:textSize="12sp"/>
+                    android:text="sample summary"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
 
-        </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Similar TV Series"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"/>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/similarTVSeriesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:scrollbars="horizontal" />
+        </LinearLayout>
 
     </ScrollView>
 

@@ -4,16 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".popularTVSeries.MainActivity"
+    android:background="@color/custom_darkGrey">
 
-    <Button
-        android:id="@+id/tvSeriesBtn"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TV Series"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+             />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPopular"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Popular"
+                android:textColor="@color/white"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/custom_lightGrey"/>
+            <Button
+                android:id="@+id/btnAirToday"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Airing Today"
+                android:textColor="@color/white"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/custom_lightGrey"/>
+            <Button
+                android:id="@+id/btnAir"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="On The Air"
+                android:textColor="@color/white"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/custom_lightGrey"/>
+            <Button
+                android:id="@+id/btnTopRated"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Top Rated"
+                android:textColor="@color/white"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/custom_lightGrey"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tvSeriesRecyclerView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TV Series"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        android:layout_marginTop="10dp"/>
 
+    <ProgressBar
+        android:id="@+id/progress_bar_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSeriesRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/tvSeriesRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
